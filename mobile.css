@@ -1,0 +1,259 @@
+.menu-bar {
+  display: none;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: 0px solid;
+  z-index: 20;
+  outline: none;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-right: 20px;
+}
+
+.slide-top,
+.slide-middle,
+.slide-bottom {
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  border-radius: 12px;
+  background: #fff;
+  top: 0;
+  left: 0;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.slide-middle {
+  transform: translateY(7px);
+}
+
+.slide-bottom {
+  transform: translateY(14px);
+}
+.open {
+  transform: rotate(90deg);
+  transform: translateY(-5px) translateX(-5px);
+}
+
+.open .slide-top {
+  /* background: red; */
+  transform: rotate(45deg) translateY(10px) translateX(10px);
+}
+
+.open .slide-middle {
+  display: none;
+}
+
+.open .slide-bottom {
+  transform: rotate(-45deg) translateY(10px) translateX(-10px);
+}
+
+/* mobile display   */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.hidden {
+  display: none;
+}
+
+.line {
+  width: 80%;
+  height: 1px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.mobile-container {
+  z-index: 10;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 90%;
+  border-radius: 20px;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+}
+.mobile-link {
+  /* background: yellow; */
+  margin: 20px;
+  font-size: 20px;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  .background-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+  .background-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  nav {
+    display: none;
+  }
+
+  .nav img {
+    height: 70px;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+  .wrapper {
+    font-size: 26px;
+    margin: 100px auto 0 auto;
+    box-sizing: content-box;
+    padding: 50px 30px 0 30px;
+    display: flex;
+    color: white;
+    justify-content: center;
+  }
+
+  .words {
+    overflow: hidden;
+    height: 65px;
+
+    /* margin-left: 5px; */
+  }
+
+  .words span {
+    display: flex;
+    height: 100%;
+    margin-left: -8px;
+    /* padding-left: -1000px; */
+    animation: spin 20s infinite;
+  }
+  .wrapper-sub-heading {
+    /* display: none; */
+    font-size: 14px;
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+  }
+
+  /* // section 2  */
+
+  .s1-heading h1 {
+    font-size: 24px;
+  }
+
+  .h1-line {
+    width: 200px;
+  }
+  .date {
+    font-size: 16px;
+  }
+
+  .sub-heading {
+    padding: 0 22px;
+    font-size: 12px;
+  }
+  .btn {
+    padding: 13px;
+    width: 150px;
+  }
+}
+
+/* planet rotaring resposive  */
+@media (max-width: 780px) {
+  .planet {
+    flex-direction: column;
+  }
+  .earth {
+    width: 300px;
+    height: 300px;
+    box-shadow: inset 0 0 20px #03a9f4, 0 0 120px #03a9f4;
+  }
+
+  .mars {
+    width: 300px;
+    height: 300px;
+    box-shadow: inset 0 0 20px #ff5722, 0 0 120px #ff5722;
+  }
+
+  .venus {
+    width: 300px;
+    height: 300px;
+
+    box-shadow: inset 0 0 20px #973200, 0 0 120px #ff5722;
+  }
+
+  .mercury {
+    width: 250px;
+    height: 250px;
+
+    box-shadow: inset 0 0 20px #aa9401, 0 0 120px #aa9401;
+  }
+
+  .jupiter {
+    width: 310px;
+    height: 310px;
+
+    box-shadow: inset 0 0 20px #8f8d86, 0 0 120px #f4f0d6;
+  }
+  .neptune {
+    width: 300px;
+    height: 300px;
+
+    box-shadow: inset 0 0 20px #4665ff, 0 0 120px #4665ff;
+  }
+
+  .slider__btn {
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 2.5rem;
+  }
+
+  .dots {
+    bottom: 45%;
+  }
+  .dots__dot {
+    height: 10px;
+    width: 10px;
+  }
+
+  .description h2,
+  .description p {
+    text-align: center;
+    margin: 0px 20px;
+  }
+  .description h2 {
+    font-size: 3.25rem;
+  }
+  .description {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+}
